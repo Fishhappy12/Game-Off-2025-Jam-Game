@@ -22,7 +22,6 @@ public class TextToDecipher : MonoBehaviour
 
     public Sprite[] radioSprites;
     public GameObject Radio;
-    public GameObject Light;
 
     public bool HasMsg;
     private void Start()
@@ -37,12 +36,10 @@ public class TextToDecipher : MonoBehaviour
         if (HasMsg)
         {
             Radio.GetComponent<SpriteRenderer>().sprite = radioSprites[1];
-            Light.SetActive(true);
         }
         else
         {
             Radio.GetComponent<SpriteRenderer>().sprite = radioSprites[0];
-            Light.SetActive(false);
         }
     }
 
