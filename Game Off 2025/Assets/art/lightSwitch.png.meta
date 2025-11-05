@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: bc6797b2a27214441ad439c6dac735d2
+guid: 8559c396aca903f45a94cba2deffccf2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2289817628215393734
-    second: typewriter_0
-  - first:
-      213: 2925990532991706886
-    second: typewriter_1
+      213: -8604921076814515950
+    second: lightSwitch_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +100,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: typewriter_0
+      name: lightSwitch_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 28
-        height: 30
+        x: 0
+        y: 0
+        width: 8
+        height: 46
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a324bc5cffee830e0800000000000000
-      internalID: -2289817628215393734
+      spriteID: 211f2381fdd259880800000000000000
+      internalID: -8604921076814515950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: typewriter_1
+      name: lightSwitch_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 2
-        width: 28
-        height: 30
+        x: 8
+        y: 0
+        width: 8
+        height: 46
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 607602f13e43b9820800000000000000
-      internalID: 2925990532991706886
+      spriteID: a5334928d24055b4f8d1f780b011bac7
+      internalID: 546349959
       vertices: []
       indices: 
       edges: []
@@ -150,7 +147,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8a1428cba1e379b4493c30dc79e3e878
+    spriteID: 69ec26631570b7b4ab08d56d947de53c
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +157,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      typewriter_0: -2289817628215393734
-      typewriter_1: 2925990532991706886
+      lightSwitch_0: -8604921076814515950
+      lightSwitch_1: 546349959
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
