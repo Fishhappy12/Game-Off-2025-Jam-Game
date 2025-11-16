@@ -51,7 +51,7 @@ public class paper : MonoBehaviour
         Vector2 Startpos = transform.position;
         Vector2 Endpos;
 
-        float speed = 2f;
+        float speed = 4f;
 
         float time = 1f;
         float progress = 0f;

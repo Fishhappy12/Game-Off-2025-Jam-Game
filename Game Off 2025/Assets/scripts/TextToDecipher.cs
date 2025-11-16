@@ -24,6 +24,8 @@ public class TextToDecipher : MonoBehaviour
     public GameObject Radio;
 
     public bool HasMsg;
+
+    public Initiation initiation;
     private void Start()
     {
         Alphabet.AddRange("abcdefghijklmnopqrstuvwxyz".ToCharArray());
@@ -33,13 +35,16 @@ public class TextToDecipher : MonoBehaviour
 
     private void Update()
     {
-        if (HasMsg)
+        if (initiation.radioOn)
         {
-            Radio.GetComponent<SpriteRenderer>().sprite = radioSprites[1];
-        }
-        else
-        {
-            Radio.GetComponent<SpriteRenderer>().sprite = radioSprites[0];
+            if (HasMsg)
+            {
+                Radio.GetComponent<SpriteRenderer>().sprite = radioSprites[1];
+            }
+            else
+            {
+                Radio.GetComponent<SpriteRenderer>().sprite = radioSprites[0];
+            }
         }
     }
 
@@ -101,19 +106,22 @@ public class TextToDecipher : MonoBehaviour
 
     public void OnMouseOver()
     {
-        transform.localScale = new Vector2(1.1f, 1.1f);
-
-        if (HasMsg)
+        if (initiation.radioOn)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (CurSprite < OutputSymbols.Count - 1) CurSprite++;
-                else
-                {
-                    CurSprite = 0;
-                }
+            transform.localScale = new Vector2(1.1f, 1.1f);
 
-                Renderer.sprite = OutputSymbols[CurSprite];
+            if (HasMsg)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (CurSprite < OutputSymbols.Count - 1) CurSprite++;
+                    else
+                    {
+                        CurSprite = 0;
+                    }
+
+                    Renderer.sprite = OutputSymbols[CurSprite];
+                }
             }
         }
     }
@@ -129,7 +137,7 @@ public class TextToDecipher : MonoBehaviour
         {
             yield return new WaitForSeconds(Random.Range(5, 10));
 
-            if (!HasMsg)
+            if (!HasMsg && initiation.radioOn)
             {
                 RandString();
             }

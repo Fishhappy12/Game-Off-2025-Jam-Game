@@ -7,13 +7,17 @@ public class Typewriter : MonoBehaviour
     private bool UiShown;
 
     public TextToDecipher TextToDecipher;
+    public bool CanUse = false;
     private void OnMouseOver()
     {
-        transform.localScale = new Vector2(1.1f, 1.1f);
-
-        if (Input.GetMouseButtonDown(0))
+        if (CanUse)
         {
-            StartCoroutine(ClickDelay());
+            transform.localScale = new Vector2(1.1f, 1.1f);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartCoroutine(ClickDelay());
+            }
         }
     }
 
