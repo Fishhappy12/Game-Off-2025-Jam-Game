@@ -49,6 +49,21 @@ public class Typewriter : MonoBehaviour
         string InputTxt = Ui.GetComponentInChildren<TMP_InputField>().text;
         Ui.GetComponentInChildren<TMP_InputField>().text = "";
 
+        int amountRight = 0;
+
+        for (int i = 0; i < InputTxt.Length; i++)
+        {
+            if (InputTxt[i] == TextToDecipher.CurString[i])
+            {
+                amountRight++;
+            }
+        }
+
+        if (amountRight / InputTxt.Length >= 0.8f)
+        {
+            TextToDecipher.AmountGot++;
+        }
+
         if (InputTxt != "")
         {
             TextToDecipher.Reset();

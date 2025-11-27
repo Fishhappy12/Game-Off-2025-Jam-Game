@@ -167,6 +167,10 @@ public class TypeWriterOn : MonoBehaviour
             {
                 IsTouching = true;
             }
+            else
+            {
+                IsTouching = false;
+            }
 
             if (IsTouching)
             {

@@ -26,7 +26,7 @@ public class RandomizeSymbols : MonoBehaviour
             NotUsed.Remove(go);
         }
 
-        Paper.ResetPaper();
+        if(Paper != null) Paper.ResetPaper();
 
         return Output;
     }
